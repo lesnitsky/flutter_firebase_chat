@@ -14,6 +14,7 @@ class NewChatScreen extends StatelessWidget {
             Expanded(
               child: TextField(
                 autofocus: true,
+                decoration: InputDecoration(labelText: 'Chat title'),
               ),
             ),
             FlatButton(
