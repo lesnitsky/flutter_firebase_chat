@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NewChatScreen extends StatelessWidget {
+  final controller = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,6 +17,7 @@ class NewChatScreen extends StatelessWidget {
               child: TextField(
                 autofocus: true,
                 decoration: InputDecoration(labelText: 'Chat title'),
+                controller: controller,
               ),
             ),
             FlatButton(
