@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_chat/screens/new_chat_screen.dart';
 
 class ChatListScreen extends StatelessWidget {
   @override
