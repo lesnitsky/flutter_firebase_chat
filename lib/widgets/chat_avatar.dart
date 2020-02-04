@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
 const _colors = [
-  Colors.deepOrange,
   Colors.red,
   Colors.green,
-  Colors.deepPurple,
-  Colors.brown,
-  Colors.teal,
-  Colors.tealAccent,
+  Colors.purple,
+  Colors.yellow,
+  Colors.blue,
 ];
 
 class ChatAvatar extends StatelessWidget {
@@ -22,8 +20,8 @@ class ChatAvatar extends StatelessWidget {
     final l = color.computeLuminance();
 
     return Container(
-      width: 46,
-      height: 46,
+      width: 40,
+      height: 40,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(23),
         color: color,
