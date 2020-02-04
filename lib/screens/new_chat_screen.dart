@@ -7,15 +7,18 @@ class NewChatScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('New chat'),
       ),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: TextField(),
-          ),
-          FlatButton(
-            child: Text('Create'),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: TextField(),
+            ),
+            FlatButton(
+              child: Text('Create'),
+            ),
+          ],
+        ),
       ),
     );
   }
