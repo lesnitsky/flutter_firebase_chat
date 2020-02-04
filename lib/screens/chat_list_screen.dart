@@ -8,7 +8,13 @@ class ChatListScreen extends StatelessWidget {
       body: Container(),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.edit),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            new MaterialPageRoute(
+              builder: (context) => NewChatScreen(),
+            ),
+          );
+        },
       ),
     );
   }
