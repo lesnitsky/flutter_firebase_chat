@@ -6,6 +6,10 @@ class ChatListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Chats')),
       body: Container(),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.edit),
+        onPressed: () {},
+      ),
     );
   }
 }
