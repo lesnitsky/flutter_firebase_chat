@@ -8,4 +8,7 @@ class Chat {
   final String title;
 
   Chat({this.id, this.title});
+
+  factory Chat.fromJson(Map<String, dynamic> data) => _$ChatFromJson(data);
+  Map<String, dynamic> toJson() => _$ChatToJson(this);
 }
