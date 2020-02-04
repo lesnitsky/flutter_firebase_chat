@@ -7,6 +7,8 @@ void main() {
 class FirebaseChatApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //
+    return MaterialApp(
+      home: ChatListScreen(),
+    );
   }
 }
