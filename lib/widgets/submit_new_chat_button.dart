@@ -31,6 +31,12 @@ class _SubmitNewChatButtonState extends State<SubmitNewChatButton> {
   }
 
   @override
+  void dispose() {
+    widget.controller.removeListener(_onTextChanged);
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FlatButton(
       textColor: Colors.blue,
