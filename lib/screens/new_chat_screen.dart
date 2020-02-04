@@ -7,6 +7,9 @@ class NewChatScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('New chat'),
       ),
+      body: Column(
+        children: <Widget>[],
+      ),
     );
   }
 }
