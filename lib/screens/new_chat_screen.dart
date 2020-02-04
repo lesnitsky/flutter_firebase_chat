@@ -9,7 +9,9 @@ class NewChatScreen extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          TextField(),
+          Expanded(
+            child: TextField(),
+          ),
           FlatButton(
             child: Text('Create'),
           ),
