@@ -21,7 +21,7 @@ class NewChatScreen extends StatelessWidget {
                 controller: controller,
               ),
             ),
-            SubmitNewChatButton(),
+            SubmitNewChatButton(controller: controller),
           ],
         ),
       ),

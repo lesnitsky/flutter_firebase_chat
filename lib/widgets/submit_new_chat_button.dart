@@ -10,9 +10,12 @@ class SubmitNewChatButton extends StatefulWidget {
 }
 
 class _SubmitNewChatButtonState extends State<SubmitNewChatButton> {
+  bool disabled = false;
+
   @override
   Widget build(BuildContext context) {
     return FlatButton(
+      onPressed: disabled ? null : () {},
       child: Text('Create'),
     );
   }
