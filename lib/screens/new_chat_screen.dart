@@ -8,7 +8,7 @@ class NewChatScreen extends StatelessWidget {
   Future<void> createChat(BuildContext context) async {
     Navigator.of(context).pushReplacement(
       new MaterialPageRoute(
-        builder: (context) => ChatScreen(),
+        builder: (context) => ChatScreen(title: controller.text),
       ),
     );
   }
