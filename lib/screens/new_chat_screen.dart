@@ -12,7 +12,9 @@ class NewChatScreen extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Expanded(
-              child: TextField(),
+              child: TextField(
+                autofocus: true,
+              ),
             ),
             FlatButton(
               child: Text('Create'),
