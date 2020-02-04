@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_chat/screens/chat_screen.dart';
 import 'package:flutter_firebase_chat/widgets/submit_new_chat_button.dart';
 
 class NewChatScreen extends StatelessWidget {
   final controller = new TextEditingController();
+
+  Future<void> createChat(BuildContext context) async {
+    Navigator.of(context).pushReplacement(
+      new MaterialPageRoute(
+        builder: (context) => ChatScreen(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +28,17 @@ class NewChatScreen extends StatelessWidget {
                 autofocus: true,
                 decoration: InputDecoration(labelText: 'Chat title'),
                 controller: controller,
+                onSubmitted: (_) {
+                  createChat(context);
+                },
               ),
             ),
-            SubmitNewChatButton(controller: controller),
+            SubmitNewChatButton(
+              controller: controller,
+              onSubmitted: () {
+                createChat(context);
+              },
+            ),
           ],
         ),
       ),

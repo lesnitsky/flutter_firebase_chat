@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 class SubmitNewChatButton extends StatefulWidget {
   final TextEditingController controller;
+  final VoidCallback onSubmitted;
 
-  const SubmitNewChatButton({Key key, this.controller}) : super(key: key);
+  const SubmitNewChatButton({Key key, this.controller, this.onSubmitted})
+      : super(key: key);
 
   @override
   _SubmitNewChatButtonState createState() => _SubmitNewChatButtonState();
@@ -40,7 +42,7 @@ class _SubmitNewChatButtonState extends State<SubmitNewChatButton> {
   Widget build(BuildContext context) {
     return FlatButton(
       textColor: Colors.blue,
-      onPressed: disabled ? null : () {},
+      onPressed: disabled ? null : widget.onSubmitted,
       child: Text('Create'),
     );
   }
