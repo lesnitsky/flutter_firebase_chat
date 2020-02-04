@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_chat/widgets/submit_new_chat_button.dart';
 
 class NewChatScreen extends StatelessWidget {
   final controller = new TextEditingController();
@@ -20,9 +21,7 @@ class NewChatScreen extends StatelessWidget {
                 controller: controller,
               ),
             ),
-            FlatButton(
-              child: Text('Create'),
-            ),
+            SubmitNewChatButton(),
           ],
         ),
       ),
