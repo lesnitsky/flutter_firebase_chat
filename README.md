@@ -28,6 +28,8 @@ service cloud.firestore {
 }
 ```
 
+- Create composite `to` & `createdAt` index on messages collection
+
 ⚠️ This configuration is not intended for production use. [Read more about firestore security rules here](https://firebase.google.com/docs/firestore/security/get-started)
 
 - `flutter packages get`
