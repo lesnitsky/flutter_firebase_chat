@@ -31,13 +31,14 @@ class _MessageListState extends State<MessageList> {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(18),
-                  color: Colors.blue,
+                  color: isOwn ? Colors.blue : Colors.grey[300],
                 ),
                 padding:
                     const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                 child: Text(
                   message.content,
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: TextStyle(
+                      fontSize: 16, color: isOwn ? Colors.white : Colors.black),
                 ),
               )
             ],
