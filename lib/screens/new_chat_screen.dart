@@ -19,7 +19,7 @@ class NewChatScreen extends StatelessWidget {
     Navigator.of(context).pushReplacement(
       new MaterialPageRoute(
         builder: (context) => ChatScreen(
-          chat: Chat(id: '123', title: controller.text),
+          chat: Chat(id: id, title: controller.text),
         ),
       ),
     );
