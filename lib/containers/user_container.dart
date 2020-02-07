@@ -39,7 +39,7 @@ class _UserContainerState extends State<UserContainer> {
 
       await Firestore.instance
           .collection('users')
-          .document()
+          .document(user.id)
           .setData(user.toJson());
 
       await prefs.setString('user', json.encode(user.toJson()));
