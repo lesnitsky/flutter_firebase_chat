@@ -8,6 +8,28 @@ GDG Minsk 2020-02-07 meetup demo
 
 ## Getting Started
 
+- Create firebase project
+- Download `google-services.json` and `GoogleService-Info.plist`
+- Add these files to appropriate locations:
+
+  - `android/app/google-services.json`
+  - `ios/Runner/GoogleService-Info.plist`
+
+- Apply the rules below to your database
+
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+```
+
+⚠️ This configuration is not intended for production use. [Read more about firestore security rules here](https://firebase.google.com/docs/firestore/security/get-started)
+
 - `flutter packages get`
 - `flutter run`
 
